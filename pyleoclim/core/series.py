@@ -2088,30 +2088,34 @@ class Series:
             # Place it all in a series object and plot it:
             ts = pyleo.Series(time=time,value=signal_noise + nonlinear_trend)
             @savefig random_series.png
-            fig, ax = ts.plot(title='Timeseries with nonlinear trend'); pyleo.closefig(fig)
+            fig, ax = ts.plot(title='Timeseries with nonlinear trend')
+            pyleo.closefig(fig)
 
             # Detrending with default parameters (using EMD method with 1 mode)
             ts_emd1 = ts.detrend()
             ts_emd1.label = 'default detrending (EMD, last mode)'
             @savefig ts_emd1.png
-            fig, ax = ts_emd1.plot(title='Detrended with EMD method'); ax.plot(time,signal_noise,label='target signal'); ax.legend(); pyleo.closefig(fig)
+            fig, ax = ts_emd1.plot(title='Detrended with EMD method')
+            ax.plot(time,signal_noise,label='target signal')
+            ax.legend()
+            pyleo.closefig(fig)
 
         We see that the default function call results in a "hockey stick" at the end, which is undesirable.
         There is no automated way to fix this, but with a little trial and error, we find that removing
         the 2 smoothest modes performs reasonably well:
 
-        .. ipython:: python
-            :okwarning:
-            :okexcept:
+        .. jupyter-execute::
 
             ts_emd2 = ts.detrend(method='emd', n=2, keep_log=True)
             ts_emd2.label = 'EMD detrending, last 2 modes'
-            @savefig ts_emd_n2.png
-            fig, ax = ts_emd2.plot(title='Detrended with EMD (n=2)'); ax.plot(time,signal_noise,label='target signal'); ax.legend(); pyleo.closefig(fig)
+            fig, ax = ts_emd2.plot(title='Detrended with EMD (n=2)')
+            ax.plot(time,signal_noise,label='target signal')
+            ax.legend()
+            pyleo.closefig(fig)
 
         Another option for removing a nonlinear trend is a Savitzky-Golay filter:
 
-        .. ipython:: python
+        .. jupyter-execute::
             :okwarning:
             :okexcept:
 

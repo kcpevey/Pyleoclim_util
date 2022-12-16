@@ -41,6 +41,7 @@ extensions = [
     'sphinx.ext.autosummary',
     'sphinx.ext.intersphinx',
     'sphinx.ext.napoleon',
+    'jupyter_sphinx.execute',
     'matplotlib.sphinxext.plot_directive',
     'numpydoc',
     'nbsphinx',
