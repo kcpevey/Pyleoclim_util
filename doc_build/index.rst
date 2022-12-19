@@ -29,7 +29,7 @@ Getting Started
    :maxdepth: 1
 
    installation.rst
-   core/api.rst
+   core/api_ssa.rst
    tutorials.rst
 
 The :ref:`Pyleoclim APIs <core_api>` make use of specialized routines which are described in details in advanced functionalities.

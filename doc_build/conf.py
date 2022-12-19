@@ -16,6 +16,7 @@
 import sys
 import os
 import pyleoclim as pyleo
+import jupyter_sphinx
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
@@ -41,34 +42,34 @@ extensions = [
     'sphinx.ext.autosummary',
     'sphinx.ext.intersphinx',
     'sphinx.ext.napoleon',
-    'jupyter_sphinx.execute',
     'matplotlib.sphinxext.plot_directive',
-    'numpydoc',
-    'nbsphinx',
     'IPython.sphinxext.ipython_console_highlighting',
     'IPython.sphinxext.ipython_directive',
+    'numpydoc',
     'sphinx_search.extension'
 ]
 
-mathjax_config = {
-    'tex2jax': {
-        'inlineMath': [ ["\\(","\\)"] ],
-        'displayMath': [["\\[","\\]"] ],
-    },
-}
 
-mathjax3_config = {
-  "tex": {
-    "inlineMath": [['\\(', '\\)']],
-    "displayMath": [["\\[", "\\]"]],
-  }
-}
+#
+# mathjax_config = {
+#     'tex2jax': {
+#         'inlineMath': [ ["\\(","\\)"] ],
+#         'displayMath': [["\\[","\\]"] ],
+#     },
+# }
+#
+# mathjax3_config = {
+#   "tex": {
+#     "inlineMath": [['\\(', '\\)']],
+#     "displayMath": [["\\[", "\\]"]],
+#   }
+# }
 
-plot_include_source = True
-plot_formats = [("png", 90)]
-plot_html_show_formats = True
-plot_html_show_source_link = True
-autosummary_generate = True
+#plot_include_source = True
+#plot_formats = [("png", 90)]
+#plot_html_show_formats = True
+#plot_html_show_source_link = True
+#autosummary_generate = True
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -247,7 +248,7 @@ htmlhelp_basename = 'Pyleoclimdoc'
 
 # -- Options for LaTeX output ---------------------------------------------
 
-latex_elements = {
+#latex_elements = {
 # The paper size ('letterpaper' or 'a4paper').
 #'papersize': 'letterpaper',
 
@@ -259,15 +260,15 @@ latex_elements = {
 
 # Latex figure (float) alignment
 #'figure_align': 'htbp',
-}
+#}
 
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
-latex_documents = [
-    (master_doc, 'Pyleoclim.tex', 'Pyleoclim Documentation',
-     author, 'manual'),
-]
+#latex_documents = [
+#    (master_doc, 'Pyleoclim.tex', 'Pyleoclim Documentation',
+#     author, 'manual'),
+#]
 
 # The name of an image file (relative to this directory) to place at the top of
 # the title page.
@@ -294,10 +295,10 @@ latex_documents = [
 
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
-man_pages = [
-    (master_doc, 'pyleoclim', 'Pyleoclim Documentation',
-     [author], 1)
-]
+#man_pages = [
+#    (master_doc, 'pyleoclim', 'Pyleoclim Documentation',
+#     [author], 1)
+#]
 
 # If true, show URL addresses after external links.
 #man_show_urls = False
@@ -310,7 +311,7 @@ man_pages = [
 #  dir menu entry, description, category)
 texinfo_documents = [
     (master_doc, 'Pyleoclim', 'Pyleoclim Documentation',
-     author, 'Pyleoclim', 'One line description of project.',
+     author, 'Pyleoclim', 'Paleoclimate data analysis and visualization with Python',
      'Miscellaneous'),
 ]
 

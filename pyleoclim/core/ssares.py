@@ -137,18 +137,14 @@ class SsaRes:
 
         Plot the SSA eigenvalue spectrum of the Southern Oscillation Index:
 
-        .. ipython:: python
-            :okwarning:
-            :okexcept:
-
+        .. jupyter-execute:: python
+            
             data = pd.read_csv('https://raw.githubusercontent.com/LinkedEarth/Pyleoclim_util/Development/example_data/soi_data.csv',skiprows=0,header=1)
             ts = pyleo.Series(time=data.iloc[:,1], value=data.iloc[:,2], time_name='Year C.E', value_name='SOI', label='SOI')
             ssa = ts.ssa()
             
-            @savefig ssa_screeplot.png
             fig, ax = ssa.screeplot()
             pyleo.closefig(fig)
-
         '''
         savefig_settings = {} if savefig_settings is None else savefig_settings.copy()
 
@@ -229,25 +225,21 @@ class SsaRes:
 
         Plot the first SSA mode of the Southern Oscillation Index:
 
-        .. ipython:: python
-            :okwarning:
-            :okexcept:
-
+        .. jupyter-execute:: 
+            
             data = pd.read_csv('https://raw.githubusercontent.com/LinkedEarth/Pyleoclim_util/Development/example_data/soi_data.csv',skiprows=0,header=1)
             ts = pyleo.Series(time=data.iloc[:,1], value=data.iloc[:,2], time_name='Year C.E', value_name='SOI', label='SOI')
             ssa = ts.ssa()
             
-            @savefig ssa_modeplot1.png
+            import pyleoclim as pyleo
+            %matplotlib inline
             fig, ax = ssa.modeplot()
             pyleo.closefig(fig)
             
         Plot the second mode (note 0-based indexing):
             
-         .. ipython:: python
-             :okwarning:
-             :okexcept:
-
-             @savefig ssa_modeplot2.png
+         .. jupyter-execute::
+             
              fig, ax = ssa.modeplot(index=1)
              pyleo.closefig(fig)
 
