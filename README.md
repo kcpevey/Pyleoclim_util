@@ -4,7 +4,6 @@
 [![license](https://img.shields.io/github/license/linkedearth/Pyleoclim_util.svg)]()
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6999279.svg)](https://doi.org/10.5281/zenodo.6999279)
 [![NSF-1541029](https://img.shields.io/badge/NSF-1541029-blue.svg)](https://nsf.gov/awardsearch/showAward?AWD_ID=1541029)
-[![Build Status](https://travis-ci.org/LinkedEarth/Pyleoclim_util.svg?branch=master)](https://travis-ci.org/LinkedEarth/Pyleoclim_util)
 
 ![](https://github.com/LinkedEarth/Logos/raw/master/pyleoclim_logo_full_white.png)
 

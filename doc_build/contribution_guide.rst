@@ -111,7 +111,7 @@ Contributing new functionalities
   Now you may implement the new functionality inside Pyleoclim. In so doing, make sure you:
     * Re-use as many of Pyleoclim’s existing utilities as you can, introducing new package  dependencies only as necessary.
     * Create a docstring for your new function, describing arguments and returned variables, and showing an example of use. (Use an existing docstring for inspiration).
-    * If possible, also include a unit test for `continuous integration <https://youtu.be/_WvjhrZR01U>`_ (Pyleoclim uses `pytest` and `TravisCI`). Feel free to ask for help from the package developers.
+    * If possible, also include a unit test for `continuous integration <https://youtu.be/_WvjhrZR01U>`_ (Pyleoclim uses `pytest` and `Github Actions`). Feel free to ask for help from the package developers.
   4. Expose the new functionality in the Pyleoclim API (`ui.py`)
 
 
@@ -133,7 +133,7 @@ Testing is hugely important, as you don’t want your “upgrades” to break th
 
 (see e.g. test_ui_Series.py for example)
 
-Your test should be as minimal as possible; it is aimed to see if the function your wrote/updated works as advertised given a reasonably comprehensive list of possible arguments. Pyleoclim’s tests rely on data already included in the example_data directory, and we strongly recommend that you do the same; only introduce a new dataset if the existing ones are insufficient to properly test your code. In general, the simpler the test, the better, as it will run in less time and won’t get the Travis gods angry with us.
+Your test should be as minimal as possible; it is aimed to see if the function your wrote/updated works as advertised given a reasonably comprehensive list of possible arguments. Pyleoclim’s tests rely on data already included in the example_data directory, and we strongly recommend that you do the same; only introduce a new dataset if the existing ones are insufficient to properly test your code. In general, the simpler the test, the better, as it will run in less time and won’t get the GitHub gods angry with us.
 
 To run the test(s):
 
